@@ -104,7 +104,9 @@ app.post('/validate-rule', (req, res) => {
 });
 
 
-
+setInterval(() => {
+http.get(`https://prosvalidator.glitch.me`);
+}, 280000);
 
 
 
