@@ -7,7 +7,7 @@ curl -H "Content-Type: application/json" -d '{
     "condition_value": "a"
   },
   "data": "damien-marley"
-}' http://localhost:3000/validate-rule
+}' https://prosvalidator.glitch.me/validate-rule
 
 
 echo ""
@@ -25,7 +25,7 @@ curl -H "Content-Type: application/json" -d '{
 		"position": "Captain",
 		"missions": 45
 	}
-}' http://localhost:3000/validate-rule
+}' https://prosvalidator.glitch.me/validate-rule
 
 
 
@@ -49,7 +49,7 @@ curl -H "Content-Type: application/json" -d '{
 			"failed": 1
 		}
 	}
-}' http://localhost:3000/validate-rule
+}' https://prosvalidator.glitch.me/validate-rule
 
 
 
@@ -63,7 +63,7 @@ curl -H "Content-Type: application/json" -d '{
     "condition_value": "rocinante"
   },
   "data": ["The Nauvoo", "The Razorback", "The Roci", "Tycho"]
-}' http://localhost:3000/validate-rule
+}' https://prosvalidator.glitch.me/validate-rule
 
 
 # INVALID JSON
@@ -86,7 +86,7 @@ curl -H "Content-Type: application/json" -d '{
       failed: 1
     }
   }
-}' http://localhost:3000/validate-rule
+}' https://prosvalidator.glitch.me/validate-rule
 
 echo ""
 echo ""

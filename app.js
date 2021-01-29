@@ -1,3 +1,4 @@
+const http = require("http")
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
@@ -26,7 +27,8 @@ app.get('/', (req, res) => {
     twitter: "@proskelito"
   };
   const message = "My Rule-Validation API";
-  res.send(json_response({message:message, status:success, data:data}));
+  console.log(Date.now() + " Ping Received");
+  res.status(200).send(json_response({message:message, status:success, data:data}));
 });
 
 
@@ -100,6 +102,11 @@ app.post('/validate-rule', (req, res) => {
   };
 
 });
+
+
+setInterval(() => {
+http.get(`https://prosvalidator.glitch.me`);
+}, 280000);
 
 
 
