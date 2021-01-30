@@ -1,4 +1,4 @@
-const http = require("http")
+const https = require("https")
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
@@ -105,8 +105,10 @@ app.post('/validate-rule', (req, res) => {
 
 
 setInterval(() => {
-http.get(`https://prosvalidator.glitch.me`);
-}, 280000);
+console.log("done");
+https.get(`https://prosvalidator.glitch.me`);
+console.log("request sent")
+}, 2800);
 
 
 
