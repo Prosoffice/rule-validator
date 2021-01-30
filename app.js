@@ -1,4 +1,3 @@
-const https = require("https")
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
@@ -12,7 +11,7 @@ const ruleValidator = my_utils.ruleValidator;
 app.set('json spaces', 3);
 app.use(bodyParser.json({strict: false}))
 app.use(ensureJson)
-app.listen(3000);
+app.listen(process.env.PORT, '0.0.0.0');
 
 const success = "success";
 const error = "error";
@@ -102,14 +101,6 @@ app.post('/validate-rule', (req, res) => {
   };
 
 });
-
-
-setInterval(() => {
-console.log("done");
-https.get(`https://prosvalidator.glitch.me`);
-console.log("request sent")
-}, 2800);
-
 
 
 
